@@ -56,8 +56,8 @@ def ai_ask(prompt, data=None, temperature=0.5, max_tokens=250, model="mistral-sm
 		response_data = response.json()
 		content = response_data["choices"][0]["message"]["content"]
 		return content
-		except Exception as e:
-			return f"Error: {str(e)}"
+    except Exception as e:
+        return f"Error: {str(e)}"
 	
 	# Streamlit app
 	st.title("SilasKinnear_AIBot")
